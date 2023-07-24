@@ -1,0 +1,14 @@
+function solucao(sequencia) {
+ const imagens = 7; 
+  let indiceAtual = 0; 
+
+  for (let i = 0; i < sequencia.length; i++) {
+    if (sequencia[i] === ">") {
+      indiceAtual = (indiceAtual + 1) % imagens; 
+    } else if (sequencia[i] === "<") {
+      indiceAtual = (indiceAtual - 1 + imagens) % imagens; 
+    }
+  }
+
+  console.log (indiceAtual);
+}
